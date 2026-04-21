@@ -1,0 +1,18 @@
+# ================================
+# Exam-Web - Python requirements
+# ================================
+
+# Servidor web
+flask>=2.2
+
+# Acceso a ficheros Excel
+openpyxl>=3.1
+
+# Icono en bandeja del sistema
+pystray>=0.19
+
+# Gestión de imágenes (iconos, bandeja)
+pillow>=10.0
+
+# Base de datos Access (opcional, solo si se usa)
+pyodbc>=5.0; platform_system=="Windows"

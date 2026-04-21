@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Exam‑Web by Naidel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      margin: 0;
+      background: #0f1115;
+      color: #e5e7eb;
+    }
+    header {
+      background: #020617;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      color: #aab3c5;
+    }
+    nav {
+      background: #020617;
+      padding: 0.6rem 1rem;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      border-bottom: 1px solid #1e293b;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 1000px;
+      margin: 2.8rem auto;
+      padding: 0 1.6rem;
+    }
+    h2 {
+      border-left: 4px solid #6c5ce7;
+      padding-left: 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 1.4rem;
+      margin: 1rem 0;
+    }
+    .card ul {
+      margin: 0.3rem 0 0 1.2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #9ca3af;
+      border-top: 1px solid #1e293b;
+      background: #020617;
+    }
+    .btn {
+      display: inline-block;
+      background: #6c5ce7;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1.2rem;
+    }
+    .btn:hover {
+      background: #5847db;
+    }
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background: #111827;
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Exam‑Web</h1>
+  <p>
+    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
+    <img src="https://img.shields.io/badge/Platform-Windows-green">
+    <img src="https://img.shields.io/badge/Backend-Python%20%7C%20Flask-blueviolet">
+  </p>
+  <p>Web‑based exam server with Windows control panel</p>
+</header>
+
+<nav>
+  <a href="#about">What is it?</a>
+  <a href="#architecture">Architecture</a>
+  <a href="#windows">Windows App</a>
+  <a href="#web">Web Interface</a>
+  <a href="#license">License</a>
+  <a href="#donate">❤️ Support</a>
+</nav>
+
+<section id="about">
+  <h2>What is Exam‑Web?</h2>
+  <div class="card">
+    <p><strong>Exam‑Web</strong> is a Windows desktop application that allows you to
+       <strong>manage and launch a local web‑based exam server</strong> in a simple,
+       flexible and controlled way.</p>
+
+    <p>The project is designed for training and simulation of multiple‑choice exams,
+       especially in technical studies, certifications and competitive exams.</p>
+
+    <p>Exam‑Web clearly separates two areas:
+       the <strong>server management</strong> (Windows application) and
+       the <strong>exam experience</strong> (web interface).</p>
+  </div>
+</section>
+
+<section id="architecture">
+  <h2>Project architecture</h2>
+  <div class="card">
+    <ul>
+      <li>Windows desktop application (configuration and control)</li>
+      <li>Local web server based on <strong>Python + Flask</strong></li>
+      <li>Browser‑based exam interface</li>
+      <li>Question databases supported in:
+        <ul>
+          <li>Excel</li>
+          <li>Access</li>
+          <li>SQLite</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="windows">
+  <h2>Windows application (Control panel)</h2>
+  <div class="card">
+    <p>The Windows application is the main entry point of the system.
+       From it, the entire web server lifecycle is controlled.</p>
+
+    <ul>
+      <li>Select the question data file</li>
+      <li>Automatic detection of the data source type</li>
+      <li>Configure port and protocol (HTTP / HTTPS)</li>
+      <li>Configure TLS certificates for HTTPS</li>
+      <li>Start and stop the web server</li>
+      <li>Minimize to system tray</li>
+      <li>Access real‑time log console</li>
+      <li>Persist configuration in a JSON file</li>
+    </ul>
+
+    <p>The application can run in the background, allowing users
+       to access the exam server from the browser at any time.</p>
+  </div>
+</section>
+
+<section id="web">
+  <h2>Web exam interface</h2>
+  <div class="card">
+    <p>Once the server is running, users access the exam
+       through a standard web browser.</p>
+
+    <ul>
+      <li>Multiple‑choice question display</li>
+      <li>Randomized answer content</li>
+      <li>Per‑question timer with progressive visual alerts</li>
+      <li>Tracking of correct and incorrect answers</li>
+      <li>Per‑question performance history</li>
+      <li>Marked questions for review</li>
+      <li>Access to glossary, figures and annotations</li>
+    </ul>
+
+    <p>The web interface is designed to be clear and focused
+       exclusively on the exam experience.</p>
+  </div>
+</section>
+
+<section id="license">
+  <h2>License</h2>
+  <div class="card">
+    <p>Exam‑Web is <strong>free software</strong>,
+       distributed under the <strong>GNU General Public License v3 (GPLv3)</strong>.</p>
+
+    <p>You are free to use, study, modify and redistribute the software
+       under the terms of the license.</p>
+
+    <p>This software is distributed <strong>WITHOUT ANY WARRANTY</strong>,
+       including implied warranties of merchantability or fitness
+       for a particular purpose.</p>
+  </div>
+</section>
+
+<section id="donate">
+  <h2>❤️ Support the project</h2>
+  <div class="card">
+    <p>Exam‑Web is free and open‑source software developed independently.
+       If you find it useful, you can support its development.</p>
+
+    <p>
+      <a href="https://paypal.me/atmarquez" target="_blank">
+        ❤️ Donate via PayPal
+      </a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024–2026 Antonio Teodomiro Márquez Muñoz (Naidel)</p>
+  <p>
+    <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">
+      Full text of the GPLv3 license
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>

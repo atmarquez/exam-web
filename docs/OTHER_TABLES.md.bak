@@ -1,0 +1,15 @@
+
+# Other Tables / Sheets
+
+## Glosario
+- Concepto: TEXT
+- Definición: TEXT
+
+## Gráficos
+- Codigo: TEXT
+- Descripcion: TEXT
+- Imagen: TEXT (ruta relativa)
+
+## Anotaciones
+- ID: INTEGER
+- Texto: TEXT

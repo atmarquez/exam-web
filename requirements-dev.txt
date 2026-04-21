@@ -1,0 +1,24 @@
+# ============================================================
+# Development dependencies for Exam-Web
+# ============================================================
+
+# --- Packaging ---
+pyinstaller
+
+# --- Code quality ---
+black
+isort
+flake8
+mypy
+
+# --- Testing (future extension) ---
+pytest
+pytest-cov
+
+# --- Documentation ---
+markdown
+mkdocs
+mkdocs-material
+
+# --- Utilities ---
+wheel
