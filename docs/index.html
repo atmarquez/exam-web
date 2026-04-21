@@ -1,238 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Servidor de Exámenes Exam-Web by Naidel</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam-Web Documentation</title>
 
-  <style>
-    body {
-      font-family: system-ui, Arial, sans-serif;
-      margin: 0;
-      background: #0f1115;
-      color: #e5e7eb;
-    }
-    header {
-      background: #020617;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      border-bottom: 1px solid #1e293b;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.3rem;
-    }
-    header p {
-      margin-top: 0.5rem;
-      color: #aab3c5;
-    }
-    nav {
-      background: #020617;
-      padding: 0.6rem 1rem;
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      border-bottom: 1px solid #1e293b;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: #93c5fd;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 1000px;
-      margin: 2.8rem auto;
-      padding: 0 1.6rem;
-    }
-    h2 {
-      border-left: 4px solid #6c5ce7;
-      padding-left: 0.7rem;
-      margin-bottom: 1.2rem;
-    }
-    .card {
-      background: #020617;
-      border: 1px solid #1e293b;
-      border-radius: 8px;
-      padding: 1.4rem;
-      margin: 1rem 0;
-    }
-    .card ul {
-      margin: 0.3rem 0 0 1.2rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #9ca3af;
-      border-top: 1px solid #1e293b;
-      background: #020617;
-    }
-    .btn {
-      display: inline-block;
-      background: #6c5ce7;
-      color: white;
-      padding: 0.7rem 1.2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 1.2rem;
-    }
-    .btn:hover {
-      background: #5847db;
-    }
-    footer a {
-      color: #93c5fd;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    code {
-      background: #111827;
-      padding: 0.1rem 0.3rem;
-      border-radius: 4px;
-    }
-  </style>
+  <!-- Redirección por idioma -->
+  <script>
+    (function () {
+      var lang = navigator.language || navigator.userLanguage;
+      lang = lang.toLowerCase();
+
+      if (lang.startsWith("es")) {
+        window.location.replace("index_es.html");
+      } else {
+        window.location.replace("index_en.html");
+      }
+    })();
+  </script>
+
+  <!-- Fallback si JS está desactivado -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=index_en.html">
+  </noscript>
 </head>
 
 <body>
-
-<header>
-  <h1>Servidor de Exámenes Exam‑Web by Naidel</h1>
+  <p>Redirecting…</p>
   <p>
-    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
-    <img src="https://img.shields.io/badge/Platform-Windows-green">
-    <img src="https://img.shields.io/badge/Backend-Python%20%7C%20Flask-blueviolet">
+    <a href="index_es.html">Español</a> |
+    <a href="index_en.html">English</a>
   </p>
-  <p>Servidor web de exámenes con interfaz de control en Windows</p>
-</header>
-
-<nav>
-  <a href="#about">¿Qué es?</a>
-  <a href="#architecture">Arquitectura</a>
-  <a href="#windows">Aplicación Windows</a>
-  <a href="#web">Interfaz Web</a>
-  <a href="#license">Licencia</a>
-  <a href="#donar">❤️ Apoyar</a>
-</nav>
-
-<section id="about">
-  <h2>¿Qué es Exam‑Web?</h2>
-  <div class="card">
-    <p><strong>Exam‑Web</strong> es una aplicación de escritorio para Windows que permite
-       <strong>gestionar y lanzar un servidor web de exámenes</strong> de forma sencilla,
-       flexible y local.</p>
-
-    <p>El proyecto está pensado para la práctica y simulación de exámenes tipo test,
-       especialmente en contextos de estudio técnico, oposiciones o certificaciones.</p>
-
-    <p>Exam‑Web separa claramente dos ámbitos:
-       la <strong>gestión del servidor</strong> (aplicación Windows)
-       y la <strong>realización del examen</strong> (interfaz web).</p>
-  </div>
-</section>
-
-<section id="architecture">
-  <h2>Arquitectura general del proyecto</h2>
-  <div class="card">
-    <ul>
-      <li>Aplicación de escritorio Windows (control y configuración)</li>
-      <li>Servidor web local basado en <strong>Python + Flask</strong></li>
-      <li>Interfaz web accesible desde el navegador</li>
-      <li>Soporte de bases de datos de preguntas en:
-        <ul>
-          <li>Excel</li>
-          <li>Access</li>
-          <li>SQLite</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section id="windows">
-  <h2>Aplicación Windows (Panel de control)</h2>
-  <div class="card">
-    <p>La aplicación Windows es el punto de entrada principal del sistema. 
-       Desde ella se controla completamente el servidor web.</p>
-
-    <ul>
-      <li>Selección del fichero de datos de preguntas</li>
-      <li>Detección automática del tipo de base de datos</li>
-      <li>Configuración de puerto y protocolo (HTTP / HTTPS)</li>
-      <li>Configuración de certificados para HTTPS</li>
-      <li>Inicio y parada del servidor web</li>
-      <li>Minimización a la bandeja del sistema</li>
-      <li>Acceso a consola de logs en tiempo real</li>
-      <li>Persistencia de configuración en fichero JSON</li>
-    </ul>
-
-    <p>La aplicación puede funcionar en segundo plano,
-       permitiendo acceder al servidor desde el navegador en cualquier momento.</p>
-  </div>
-</section>
-
-<section id="web">
-  <h2>Interfaz web del examen</h2>
-  <div class="card">
-    <p>Una vez iniciado el servidor, los usuarios acceden al examen
-       a través del navegador web.</p>
-
-    <ul>
-      <li>Visualización de preguntas tipo test</li>
-      <li>Aleatorización del contenido de las respuestas</li>
-      <li>Temporizador por pregunta con alertas visuales</li>
-      <li>Seguimiento de aciertos y fallos</li>
-      <li>Registro histórico por pregunta</li>
-      <li>Marcado de preguntas para revisión</li>
-      <li>Acceso a glosario, gráficos y anotaciones</li>
-    </ul>
-
-    <p>La interfaz web está diseñada para ser clara,
-       usable y enfocada exclusivamente en la experiencia del examen.</p>
-  </div>
-</section>
-
-<section id="license">
-  <h2>Licencia</h2>
-  <div class="card">
-    <p>Exam‑Web es <strong>software libre</strong>,
-       distribuido bajo la licencia <strong>GNU General Public License v3 (GPLv3)</strong>.</p>
-
-    <p>Esto implica que puedes usar, estudiar, modificar y redistribuir el software
-       respetando los términos de la licencia.</p>
-
-    <p>El programa se distribuye <strong>SIN NINGUNA GARANTÍA</strong>,
-       ni siquiera la implícita de adecuación para un propósito particular.</p>
-  </div>
-</section>
-
-<section id="donar">
-  <h2>❤️ Apoya el proyecto</h2>
-  <div class="card">
-    <p>Exam‑Web es software libre y se desarrolla de forma independiente.
-       Si te resulta útil, puedes apoyar su desarrollo.</p>
-
-    <p>
-      <a href="https://paypal.me/atmarquez"
-         target="_blank"
-         rel="noopener noreferrer">❤️ Donar con PayPal</a>
-    </p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2024–2026 Antonio Teodomiro Márquez Muñoz (Naidel)</p>
-  <p>
-    <a href="https://www.gnu.org/licenses/gpl-3.0.html"
-       target="_blank" rel="noopener">
-      Texto completo de la GPLv3
-    </a>
-  </p>
-</footer>
-
 </body>
 </html>
