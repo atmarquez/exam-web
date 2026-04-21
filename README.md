@@ -12,7 +12,6 @@
 ![Last commit](https://img.shields.io/github/last-commit/atmarquez/exam-web)
 [![GitHub Pages](https://github.com/atmarquez/exam-web/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/atmarquez/exam-web/actions/workflows/pages/pages-build-deployment)
 [![Website](https://img.shields.io/badge/Website-Online-brightgreen)](https://atmarquez.github.io/exam-web/)
-[![Last Commit](https://img.shields.io/github/last-commit/atmarquez/exam-web)](https://github.com/atmarquez/exam-web/commits/main)
 [![Documentation](https://img.shields.io/badge/Docs-GitHub%20Pages-blue)](https://atmarquez.github.io/exam-web/)
 
 **Exam‑Web** is a desktop application for Windows that allows you to manage and run a **local web‑based exam server**, designed for training, self‑assessment and exam simulation.
