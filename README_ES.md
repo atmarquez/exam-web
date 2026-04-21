@@ -10,6 +10,7 @@
 ![Release](https://img.shields.io/badge/Release-v0.85.5-orange.svg)
 ![GitHub repo size](https://img.shields.io/github/repo-size/atmarquez/exam-web)
 ![Last commit](https://img.shields.io/github/last-commit/atmarquez/exam-web)
+[![GitHub Pages](https://github.com/atmarquez/exam-web/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/atmarquez/exam-web/actions/workflows/pages/pages-build-deployment)
 
 **Exam‑Web** es una aplicación de escritorio para Windows que permite **gestionar y ejecutar un servidor web local de exámenes**, orientado a entrenamiento, autoevaluación y simulación de exámenes.
 
