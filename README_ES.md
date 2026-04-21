@@ -93,4 +93,12 @@ Licencia **GNU GPL v3 o posterior**.
 
 ---
 
+## 🌐 Documentación
+
+The official documentation is available at:
+
+👉 https://atmarquez.github.io/exam-web/
+
+---
+
 🧠 Designed for study, practice and real‑exam simulation.
