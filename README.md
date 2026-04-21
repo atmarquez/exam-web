@@ -96,7 +96,7 @@ This project is licensed under the **GNU General Public License v3.0 or later (G
 
 ---
 
-## 🌐 Documentación
+## 🌐 Documentation
 
 The official documentation is available at:
 
